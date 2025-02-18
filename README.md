@@ -4,7 +4,9 @@ Deployment and Technical Overview of SpaceShip 2D Unity Game
 I followed the tutorial "Unity Tutorial: How to Make a 2D Space Shooter Game" by ZeroCool - Game Development ([link](https://www.youtube.com/@ZeroCoolGameDevelopment)) to deploy my SpaceShip 2D Unity game. There are multiple platforms available for deployment, but I chose itch.io as shown in the tutorial. Once deployed, I received a direct itch.io link to share with others so they can try out the game.
 
 👉 My docs about this game: https://docs.google.com/document/d/1P7MO0wOfBX6XOaM3uakamH_ulYtsvbORcPB5JEgjV4c/edit?usp=sharing
+
 👉 My itch.io account: https://giaheplbro.itch.io/
+
 👉 Game link on itch.io: [SpaceShip Game](https://giaheplbro.itch.io/spaceship)
 
 This is the game Menu and UI. It includes 1 of the levels.
