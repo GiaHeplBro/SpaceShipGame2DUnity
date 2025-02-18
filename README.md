@@ -1,24 +1,145 @@
 Deployment and Technical Overview of SpaceShip 2D Unity Game
-3. Deployment Process of this 2D Unity Game
+1. Deployment Process of this 2D Unity Game
 
 I followed the tutorial "Unity Tutorial: How to Make a 2D Space Shooter Game" by ZeroCool - Game Development ([link](https://www.youtube.com/@ZeroCoolGameDevelopment)) to deploy my SpaceShip 2D Unity game. There are multiple platforms available for deployment, but I chose itch.io as shown in the tutorial. Once deployed, I received a direct itch.io link to share with others so they can try out the game.
 
 👉 My itch.io account: https://giaheplbro.itch.io/
 👉 Game link on itch.io: [SpaceShip Game](https://giaheplbro.itch.io/spaceship)
-4. Potential Improvements to this 2D Unity Game
-New Features to Add:
 
-    More levels with increasing difficulty.
-    New enemy types with different behaviors and attack patterns.
-    Additional weapons and ammunition types for more variety.
-    Boss fights with unique attack mechanics.
-    A spaceship upgrade system (e.g., speed, shield, firepower).
+This is the game Menu and UI. It includes 1 of the levels.
 
-Bugs & Enhancements:
+https://github.com/user-attachments/assets/38852d8f-8e40-40a3-9a72-3035e9738c8b
 
-    Fix collision issues where the spaceship sometimes behaves unnaturally.
-    Adjust enemy AI to make movement and attacks more dynamic.
-    Improve visual effects and sound effects for better feedback.
+And this is when the spaceship is destroyed
+
+
+https://github.com/user-attachments/assets/c2b0aef6-a126-43a8-bcc2-d5ae01a61473
+
+Disclaimer: This 2D Unity game does not work for mobile, only for laptop, PC, or basically any electronic devices that has a keyboard since the game only detects key presses from a keyboard in order to move the character. It does not detect touchscreen controls. (idk how to do that yet, but I believe shouldn't be too difficult) You can open the 2D Unity game on mobile, but you will have no way to move the character.
+
+# SpaceShip 2D Unity Game Development Report
+
+## **1. Game Idea**
+The design of this 2D space shooter game is inspired by classic arcade shooters like **Space Invaders** and **Galaga**, as well as modern space combat games. The main focus is on fast-paced shooting mechanics, dodging obstacles, and progressively challenging waves of enemies and asteroids.
+
+### **Inspirations for the Game:**
+#### **Classic Arcade Shooters (Space Invaders, Galaga, etc.):**
+- Simple yet addictive shooting mechanics.
+- Progressive difficulty with increasing enemy waves.
+- High-score-based progression.
+
+#### **Modern Space Combat Elements:**
+- Different weapon types and power-ups.
+- Dynamic background movement to create a sense of space travel.
+- Enemy AI that actively tracks and engages the player.
+
+## **2. Features of the SpaceShip 2D Unity Game**
+
+This prototype **2D space shooter** focuses on fundamental gameplay mechanics rather than an in-depth storyline. The main objective is to survive waves of incoming asteroids and enemies while upgrading weapons and abilities. Below is a breakdown of the core features:
+
+### **Player Spaceship Mechanics:**
+- **Basic Movement:** Move left and right using arrow keys or A/D keys.
+- **Shooting Mechanism:** Fire projectiles to destroy asteroids and enemies.
+- **Health System:**
+  - The spaceship starts with **3 HP**.
+  - Loses HP when colliding with asteroids or getting hit by enemy projectiles.
+  - Game over when HP reaches **0**.
+- **Upgrades & Power-ups (Future Updates):**
+  - **Speed Boost:** Temporarily increases movement speed.
+  - **Shield Power-up:** Grants temporary immunity from damage.
+  - **Weapon Upgrade:** Enhances projectile damage or firing speed.
+
+### **Enemy and Asteroid Mechanics:**
+- **Asteroids:**
+  - Spawn randomly from the top of the screen and move downward.
+  - Can be destroyed by projectiles but will deal damage if they hit the spaceship.
+- **Enemy Ships (Future Updates):**
+  - Actively track and chase the player within a certain range.
+  - Some enemies will shoot projectiles at the player.
+  - Different enemy types with unique movement and attack patterns.
+- **Boss Fights (Future Updates):**
+  - Larger enemies with multiple attack phases.
+  - Special attacks such as laser beams or missile barrages.
+
+### **Game World & Background Elements:**
+- **Procedural Background Movement:**
+  - Stars and space dust scroll dynamically to simulate spaceship movement.
+- **Dynamic Music Transitions (Future Updates):**
+  - Different soundtracks for regular gameplay, boss fights, and victory sequences.
+
+### **Game Objectives (in order of progression):**
+1. **Survive the asteroid field** by dodging or destroying incoming obstacles.
+2. **Fight off enemy ships** that attempt to attack you.
+3. **Defeat the final boss (Future Update)** to complete the game successfully.
+
+## **3. Building Process of this 2D Unity Game**
+
+This 2D Unity game is built using the **Unity Engine** with scripting done in **C#** through **Visual Studio**.
+
+### **Project Folder Structure:**
+The Unity project is structured as follows:
+- **Assets** (Contains game assets such as sprites, sounds, scripts, and scenes.)
+- **Library** (Automatically generated by Unity; not included in the repository.)
+- **Logs** (Not included in the repository.)
+- **Packages** (Stores package dependencies for the Unity project.)
+- **ProjectSettings** (Holds Unity project settings.)
+- **UserSettings** (Not included in the repository.)
+
+#### **Contents of the 'Assets' Folder:**
+- **C# Scripts:**
+  - Contains all scripts handling movement, shooting, enemy behavior, and UI updates.
+  - Scripts were initially generated with ChatGPT’s help and later refined through debugging.
+- **Audio:**
+  - Contains background music sourced from NoCopyright libraries.
+  - Music is set to loop using C# scripting.
+- **Scenes:**
+  - Stores the main game scene, which includes spaceship movement, enemy spawning, and UI elements.
+- **Picture:**
+  - Contains spaceship, asteroid, and enemy ship picture.
+- **Pretabs:**
+  - Contains all tab use replay.
+- **AssetStore:**
+  - Contains spaceship, asteroid, and enemy ship sprites.
+  - Some sprites were sourced from free asset websites, while others were edited in Pain2D.
+ - **Other:**
+  - Contains all another thing small left.
+    
+
+### **Steps in the Game Development Process:**
+1. **Setting Up the Project in Unity:**
+   - Created a new 2D project in Unity.
+   - Defined folder structures and imported necessary assets.
+2. **Designing the Menu Spaceship:**
+   - Added Menu, Option, Quit button UI.
+   - Added backround, create UI button.
+3. **Designing the Player Spaceship:**
+   - Added movement mechanics and shooting logic.
+   - Implemented health and damage detection.
+4. **Creating the Enemy and Asteroid Spawning System:**
+   - Designed a random spawning system for asteroids.
+   - Developed enemy AI (to be expanded in future updates).
+5. **Implementing UI Elements:**
+   - Designed a simple UI for health display and game-over messages.
+6. **Adding Sound Effects and Background Music:**
+   - Implemented shooting, explosion, and ambient background sound effects.
+7. **Testing and Debugging:**
+   - Conducted playtests to refine controls and difficulty balancing.
+   - Fixed bugs related to collisions, UI, and enemy behavior.
+
+### **Future Improvements:**
+- **Expand enemy AI behavior.**
+- **Introduce multiple weapon types and power-ups.**
+- **Implement boss fights with unique attack patterns.**
+
+## **4. Sources & References:**
+- Unity Tutorial - How to Make a 2D Space Shooter Game (https://www.youtube.com/watch?v=DphN2B8K60Y&list=PLYm-ezRxdN89e-ygP6lxnXNe4XcIujbIw)
+- Make Your MAIN MENU Quickly! (https://www.youtube.com/watch?v=DX7HyN7oJjE&t=415s)
+- Free Sprite 2D Pixel Spaceshipss (https://assetstore.unity.com/packages/2d/characters/2d-pixel-spaceships-2-small-ships-explosions-133395)
+- Free Sprite 2D Pixel Asteroids (https://assetstore.unity.com/packages/2d/environments/2d-pixel-asteroids-136477)
+- ChatGPT (For initial C# script generation and debugging assistance)
+
+---
+
 
 5. Technicalities Between Unity and GitHub
 
@@ -37,9 +158,5 @@ These folders are not needed because Unity can regenerate them when importing th
 How to Download and Open This Unity Project from GitHub
 
 To download and open the game in Unity, I followed the tutorial "How to import GitHub projects into Unity!" by Unity Hero ([link](https://www.youtube.com/watch?v=I9QK_2QW9W8)).
-
-After importing the project, I initially thought the scene was missing. However, the game scene was simply not loaded by default. To fix this, I navigated to Assets → Scenes in the Unity Editor and opened the main scene to restore everything.
-
-This document provides a structured overview of how I deployed, improved, and managed my SpaceShip Unity game. 🚀 If needed, I can expand on any section with more details.
 
 
